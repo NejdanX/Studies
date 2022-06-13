@@ -1,0 +1,2 @@
+def defractalize(fractal):
+    pass
