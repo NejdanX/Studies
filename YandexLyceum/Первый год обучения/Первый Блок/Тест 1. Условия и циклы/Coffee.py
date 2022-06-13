@@ -1,0 +1,5 @@
+friends = int(input())
+first_coffee_ml = int(input())
+second_coffee_ml = int(input())
+cup = int(input())
+print((first_coffee_ml + second_coffee_ml) // (cup * friends))
