@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+<h2><center>Works log</center></h2>
+{% for item in jobs%}
+<div class="col-md6 border rounded">
+    <h3>Action # {{loop.index}}</h3>
+    <table frame="border">
+        <tr>
+            <th>Title of activity</th>
+            <th>Team leader</th>
+            <th>Duration</th>
+            <th>List of collaborators</th>
+            <th>Is finished</th>
+        </tr>
+        <tr>
+            <td>{{item.job}}</td>
+            <td>{{item.user.surname}} {{item.user.name}}</td>
+            <td>{{item.work_size}}</td>
+            <td>{{item.collaborators}}</td>
+            <td><div>{% if item.is_finished %} Is finished {% else %} Is not finished {% endif %}</div></td>
+        </tr>
+    </table>
+</div>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,5 @@
+alphabet = input()
+shift = int(input()) % len(alphabet)
+print(alphabet[shift:] + alphabet[:shift])
+print(alphabet)
+print(alphabet[-shift:] + alphabet[:-shift])
